@@ -3,7 +3,7 @@ const { router } = require("./routes");
 const cors = require("cors");
 const path = require("path");
 
-const port = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
 
 const app = express();
 
@@ -20,6 +20,6 @@ app.use((req, res, next) => {
 
 app.use(router);
 
-app.listen(port, () => {
+app.listen(PORT, () => {
   console.log("Server is running 3000");
 });

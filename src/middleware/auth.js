@@ -10,7 +10,7 @@ module.exports = function auth(req, res, next) {
   const token = authorization.replace("Bearer", "").trim();
 
   try {
-    const data = jwt.verify(token, "is8jd3j3ejnfunoir3r9j34n");
+    const data = jwt.verify(token, process.env.TOKEN);
     const { id } = data;
     req.userId = id;
 
